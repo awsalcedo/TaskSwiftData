@@ -6,8 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		503DE0F22C9B3DD200D64AA9 /* TareaRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DE0F12C9B3DD200D64AA9 /* TareaRow.swift */; };
+		503DE0F42C9B5E9100D64AA9 /* NewTareaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DE0F32C9B5E9100D64AA9 /* NewTareaView.swift */; };
+		504606062C99E69D00F94C9F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504606052C99E69D00F94C9F /* ContentView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		503DE0F12C9B3DD200D64AA9 /* TareaRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TareaRow.swift; sourceTree = "<group>"; };
+		503DE0F32C9B5E9100D64AA9 /* NewTareaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTareaView.swift; sourceTree = "<group>"; };
 		504605F22C99E5EC00F94C9F /* TaskSwiftData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskSwiftData.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		504606052C99E69D00F94C9F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +41,9 @@
 		504605E92C99E5EC00F94C9F = {
 			isa = PBXGroup;
 			children = (
+				504606052C99E69D00F94C9F /* ContentView.swift */,
+				503DE0F32C9B5E9100D64AA9 /* NewTareaView.swift */,
+				503DE0F12C9B3DD200D64AA9 /* TareaRow.swift */,
 				504605F42C99E5EC00F94C9F /* TaskSwiftData */,
 				504605F32C99E5EC00F94C9F /* Products */,
 			);
@@ -119,6 +131,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504606062C99E69D00F94C9F /* ContentView.swift in Sources */,
+				503DE0F22C9B3DD200D64AA9 /* TareaRow.swift in Sources */,
+				503DE0F42C9B5E9100D64AA9 /* NewTareaView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +283,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.asalcedo.TaskSwiftData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -297,7 +312,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.asalcedo.TaskSwiftData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

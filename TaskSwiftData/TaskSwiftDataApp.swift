@@ -10,9 +10,12 @@ import SwiftData
 
 @main
 struct TaskSwiftDataApp: App {
+    // es un elemento principal Contenedor
+    // el Context
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Tareas.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -27,6 +30,6 @@ struct TaskSwiftDataApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(sharedModelContainer)
+        .modelContainer(sharedModelContainer) //aquí ya inyecta el contenedor para usarlo desde donde quiera
     }
 }
