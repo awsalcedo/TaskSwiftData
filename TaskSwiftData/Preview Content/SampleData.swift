@@ -17,7 +17,7 @@ struct SampleData: PreviewModifier {
         let schema = Schema([
             Tareas.self
         ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: true) // se coloca a true para que no almencene en el BDD como es solo prueba
+        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: true) // se coloca a true para que no almencene en el BDD, sólo en memoria como es solo prueba
         
         let container =  try ModelContainer(for: schema, configurations: [modelConfiguration])
         
