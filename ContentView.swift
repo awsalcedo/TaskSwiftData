@@ -9,15 +9,19 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    
+    @Environment(\.modelContext) private var context
     //Consultar a la BDD
     @Query private var tareas: [Tareas]
     @State private var showAdd = false
     
     var body: some View {
         NavigationStack {
-            List(tareas) { tarea in
-                TareaRow(tarea: tarea)
+            VStack {
+                if tareas.isEmpty {
+                    ContentUnavailableView("No hay tareas", systemImage: "list.bullet.clipboard", description: Text("Aún no existen tareas en la app. Por favor pulse el + a arriba a la derecha para crear una nueva tarea."))
+                } else {
+                    main
+                }
             }
             .navigationTitle("Tareas")
             .toolbar {
@@ -37,6 +41,24 @@ struct ContentView: View {
         // si quiero que se vea a pantalla completa
         .fullScreenCover(isPresented: $showAdd) {
             NewTareaView()
+        }
+    }
+    
+    var main: some View {
+        
+        List {
+            ForEach(tareas) { tarea in
+                TareaRow(tarea: tarea)
+            }
+            .onDelete { index in
+                // Puede ser de esta forma o de la otra forma
+                /*if let v = index.first {
+                    context.delete(tareas[v])
+                }*/
+                for i in index {
+                    context.delete(tareas[i])
+                }
+            }
         }
     }
 }
